@@ -1,0 +1,18 @@
+name: 'Setup Terragrunt'
+description: 'Setup your GitHub Actions environment by adding Terraform and Terragrunt'
+author:  'Ministry of Justice - HMPPS EMS Platform Team <hmpps-ems-platform-team@digital.justice.gov.uk>'
+branding:
+  icon: 'package'
+  color: 'blue'
+inputs:
+  terraform_version:
+    description: 'Version of Terraform to download'
+    required: true
+    default: 'latest'
+  terragrunt_version:
+    description: 'Version of Terrgrunt to download'
+    required: true
+    default: 'latest'
+runs:
+  using: 'docker'
+  image: './Dockerfile'

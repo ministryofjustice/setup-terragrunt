@@ -16,7 +16,7 @@ function parse_verion() {
   if [[ "${INPUT_TERRAFORM_VERSION}" == "latest" ]]; then
     terraformVersion=$(curl https://api.github.com/repos/hashicorp/terraform/releases/latest | jq -r '.tag_name' | sed 's/v//')
   else
-    terraformVersion=$(echo "${INPUT_TERRAFORM_VERSION}" | sed 's/v///')
+    terraformVersion=$(echo "${INPUT_TERRAFORM_VERSION}" | sed 's/v//')
   fi
 
   if [[ "${INPUT_TERRAGRUNT_VERSION}" == "latest" ]]; then

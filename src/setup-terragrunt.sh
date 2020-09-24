@@ -39,7 +39,7 @@ function install_terraform() {
 
 function install_terragrunt() {
   terragruntDownloadUrl="https://github.com/gruntwork-io/terragrunt/releases/download/${terragruntVersion}/terragrunt_linux_amd64"
-  wget ${terraformDownloadUrl} -O /tmp/terragrunt
+  wget ${terragruntDownloadUrl} -O /tmp/terragrunt
   chmod +x /tmp/terragrunt
   mv /tmp/terragrunt ${GITHUB_BIN}
 }

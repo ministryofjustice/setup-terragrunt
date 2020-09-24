@@ -11,5 +11,5 @@ Basic:
 steps:
   - uses: actions/checkout@v2
   - uses: ministryofjustice/setup-terragrunt@main
-  - run: bin/terragrunt plan
+  - run: github-bin/terragrunt plan
 ```
